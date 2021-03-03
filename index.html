@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio Ninja Ken</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-logo">GUGI GERAR</div>
+      <div class="header-list">
+        <ul>
+          <li><a href="#about-link">About Me</a></li>
+          <li><a href="#work-link">My Project</a></li>
+          <li><a href="#contact-link">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="copy-container">
+        <h1>GUGI GERAR<span>.</span></h1>
+        <h2>MY PORTFOLIO</h2>
+      </div>
+      
+      <div class="about">
+        <h3><a id="about-link">About Me</a></h3>
+        <p>I am a programmer, especially as web developer. I have great motivation to learn and gain new knowledge, i also responsible and reliable to do a job. Besides that, i was consistent and active in a organization, which make me able to work alone or within a team. </p>
+      </div>
+
+      <div class="contents">
+        <h3><a id="work-link">Proyek Contoh</a></h3>
+        
+        <div class="row">
+          <div class="column">
+            <img id="myImg" src="images/E-Administration.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            <p>E-Administration</p>
+          </div>
+
+          <div class="column">
+            <img  id="myImg" src="images/Sentiment Analysis.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            <p>Sentiment Analysis</p>
+          </div>
+
+          <div class="column">
+            <img id="myImg" src="images/Nomads.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            <p>Nomads</p>
+          </div>
+        </div>
+
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content"> 
+            <div class="mySlides">
+              <img src="images/E-Administration.png" style="width:100%">
+              <div id="caption">E-Administration</div>
+            </div>
+        
+            <div class="mySlides">
+              <img src="images/Sentiment Analysis.png" style="width:100%">
+              <div id="caption">Sentiment Analysis</div>
+            </div>
+        
+            <div class="mySlides">
+              <img src="images/Nomads.png" style="width:100%">
+              <div id="caption">Nomads</div>
+            </div>        
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3 class="contact-title"><a id="contact-link">Contact Me</a></h3>
+        <div class="container">
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <h3>
+                          <a href="https://www.linkedin.com/in/gugigerar/" target="_blank">Gugi Gerar</a>
+                      </h3>
+                      <p>This is where I network and build my professional protfolio.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <h3>
+                          <a href="https://twitter.com/GerarGugi" target="_blank">@GerarGugi</a>
+                      </h3>
+                      <p>This is where I read news and network with different social groups.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-github-square" aria-hidden="true"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <h3>
+                          <a href="https://github.com/gugi97" target="_blank">gugi97</a>
+                      </h3>
+                      <p>This is where I share code and work on projects.</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">GUGI GERAR</div>
+      <div class="footer-list">
+        <ul>
+          <li><a href="#about-link">About Me</a></li>
+          <li><a href="#work-link">My Project</a></li>
+          <li><a href="#contact-link">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+      
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var captionText = document.getElementById("caption");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
